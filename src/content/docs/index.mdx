@@ -1,40 +1,41 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: Welcome to WJP's Message Documentation
+description: Dive into the messages, format and materials at your disposal.
+# template: splash  # removed to display the site sidebar
 hero:
-  tagline: Congrats on setting up a new Starlight project!
+  tagline: Your one stop-resource for aligning your messages with WJP's
   image:
     file: ../../assets/houston.webp
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: Consult the Documentation
+      link: /pitch/2-min-pitch/
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
-      variant: minimal
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Aside, Card, CardGrid } from '@astrojs/starlight/components';
 
-## Next steps
+## Key Principle
+
+<Aside type="note" title="Everything should connect to">
+👉 3–5 core ideas → projects → messages → materials
+</Aside>
+
+## Top Resources
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
+	<Card title="Message Pillars" icon="pencil">
+		Master [WJP's main messages](/pitch/message-pillars/)
 	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
+	<Card title="Explore Narratives" icon="setting">
+		Explain why the rule of law is important through [People Narratives](/core/people-narratives/)
 	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
+	<Card title="Materials" icon="document">
+		Use approved [Presentations](/materials/presentations/) and [brochures](/materials/wjp-brochure/)
 	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
+	<Card title="Thematic Areas" icon="add-document">
+		Understand how our activities are aligned with [Thematic One Pagers](/materials/thematic-one-pagers/)
 	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+	<Card title="Temporary blurb" icon="open-book">
+		Understand blahblah [what is the rule of law](/core/what-is-the-rol-2-min).
 	</Card>
 </CardGrid>

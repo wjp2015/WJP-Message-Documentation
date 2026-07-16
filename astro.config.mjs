@@ -2,23 +2,47 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
-// https://astro.build/config
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			title: 'WJP Message Documentation',
 			sidebar: [
 				{
-					label: 'Guides',
+					label: 'Pitch',
+					items: [{ autogenerate: { directory: 'Pitch' } }],
+				},
+				{
+					label: 'Core',
 					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
+						{
+							label: 'What is the rule of law',
+							items: [{ autogenerate: { directory: 'Core/What is the rule of law' } }],
+						},
+						{
+							label: 'Why does the rule of law matter',
+							items: [{ autogenerate: { directory: 'Core/Why does the rule of law matter' } }],
+						},
+						{
+							label: 'What is happening today',
+							items: [{ autogenerate: { directory: 'Core/What is happening today' } }],
+						},
+						{
+							label: 'How can the ROL be strengthened',
+							items: [{ autogenerate: { directory: 'Core/How can the ROL be strengthened' } }],
+						},
+						{
+							label: 'What does WJP do',
+							items: [{ autogenerate: { directory: 'Core/What does WJP do' } }],
+						},
 					],
 				},
 				{
-					label: 'Reference',
-					items: [{ autogenerate: { directory: 'reference' } }],
+					label: 'Materials',
+					items: [{ autogenerate: { directory: 'Materials' } }],
+				},
+				{
+					label: 'Index',
+					items: [{ autogenerate: { directory: 'index' } }],
 				},
 			],
 		}),
